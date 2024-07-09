@@ -1,0 +1,14 @@
+name: prettier_format_and_ESLINT
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  test:
+    name: Check the source code
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run format
+      - run: npm run lint
+      - run: npm run test_skip
