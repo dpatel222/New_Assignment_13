@@ -16,3 +16,5 @@ jobs:
         run: npm run format
       - name: Lint
         run: npm run lint
+      - name: Jest Test
+        run: npm run test_skip
