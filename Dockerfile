@@ -2,7 +2,7 @@
 FROM node:20.12.2-alpine
 
 # set working directory
-WORKDIR deep_patel_ui_garden
+WORKDIR deep_patel_ui_garden_build_checks
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
