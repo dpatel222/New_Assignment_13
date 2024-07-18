@@ -62,19 +62,28 @@ GitHub Actions is used for continuous integration to ensure code quality on ever
    name: prettier_format_and_ESLINT
    ```
 
+name: prettier_format_and_ESLINT
+
 on:
-push:
-branches: ["main"]
+  push:
+    branches: ["main"]
 
 jobs:
-test:
-name: Check the source code
-runs-on: ubuntu-latest
-steps: - uses: actions/checkout@v2 - name: Install packages
-run: npm ci - name: Prettier
-run: npm run format - name: Lint
-run: npm run lint - name: Jest Test
-run: npm run test_skip
+  test:
+    name: Check the source code
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm ci
+      - name: Prettier
+        run: npm run format
+      - name: Lint
+        run: npm run lint
+      - name: Jest Test
+        run: npm run test_skip
+
 
 ````
 
