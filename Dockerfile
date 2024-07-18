@@ -16,6 +16,6 @@ RUN npm ci
 # add app
 COPY . ./
 
-EXPOSE 8083
+EXPOSE 8018
 # start app
 CMD ["npm", "start"]

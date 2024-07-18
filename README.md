@@ -86,6 +86,15 @@ jobs:
 
 
 ````
+## To build the image run the following command
+```
+docker build -t patel_deep_coding_assignment_13 .
+```
+## to run the container run the following command
+```
+docker run --name patel_deep_coding_assignment_13 -dp 8018:8018 patel_deep_coding_assignment_13
+```
+
 
 ## DockerFile
 
