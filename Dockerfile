@@ -18,4 +18,4 @@ COPY . ./
 
 EXPOSE 8083
 # start app
-CMD ["npm", "run", "storybook"]
+CMD ["npm", "start"]
