@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "test_skip": "CI=true react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 8083",
+    "storybook": "storybook dev -p 8018",
     "build-storybook": "storybook build",
     "prepare": "husky",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx}'",

@@ -1,21 +1,22 @@
-# pull official base image
+# Use an official Node.js runtime as a parent image
 FROM node:20.12.2-alpine
 
-# set working directory
-WORKDIR deep_patel_ui_garden_build_checks
+# Set the working directory
+WORKDIR /deep_patel_ui_garden_build_checks
 
-# add `/app/node_modules/.bin` to $PATH
+# Add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
-# install app dependencies
+# Install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm ci
 
-
-# add app
+# Add app source code
 COPY . ./
 
-EXPOSE 8018
-# start app
-CMD ["npm", "start"]
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Command to run the development server
+CMD ["npm", "run", "start"]
